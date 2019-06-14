@@ -1,0 +1,23 @@
+C:\Windows\system32>E:
+
+E:\>cd "E:\Development\L-Interpreter build 2019\SRC\Debug"
+
+E:\Development\L-Interpreter build 2019\SRC\Debug>litrs32.exe -in source.asm -out source
+LI Translator v0.8 by Lukyanov
+Current version builded at: Jan 27 2019, 01:35:05
+
+Warning: reference "b1" is defined but is not used at line: 60
+Warning: reference "b2" is defined but is not used at line: 62
+Warning: reference "b3" is defined but is not used at line: 64
+Warning: reference "b4" is defined but is not used at line: 66
+Warning: reference "msg_lparam" is defined but is not used at line: 40
+Warning: reference "msg_message" is defined but is not used at line: 38
+Warning: reference "msg_point_x" is defined but is not used at line: 42
+Warning: reference "msg_point_y" is defined but is not used at line: 43
+Warning: reference "msg_time" is defined but is not used at line: 41
+Warning: reference "msg_wparam" is defined but is not used at line: 39
+Warning: reference "wcl_cbclsextra" is defined but is not used at line: 49
+Warning: reference "wcl_cbwndextra" is defined but is not used at line: 50
+Warning: reference "wcl_lpszmenuname" is defined but is not used at line: 55
+Warning: reference "wndproc" is defined but is not used at line: 216
+Done. Total code size is: 1034

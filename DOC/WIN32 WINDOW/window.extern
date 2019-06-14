@@ -1,0 +1,20 @@
+1
+754 4
+17
+kernel32 GetModuleHandleA
+user32 MessageBoxA
+user32 RegisterClassExA
+user32 ShowWindow
+user32 GetMessageA
+user32 TranslateMessage
+user32 DispatchMessageA
+user32 PostQuitMessage
+user32 DefWindowProcA
+user32 CreateWindowExA
+user32 LoadCursorA
+user32 LoadIconA
+user32 GetClientRect
+user32 BeginPaint
+user32 DrawTextA
+user32 EndPaint
+gdi32 GetStockObject

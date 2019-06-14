@@ -1,0 +1,5 @@
+C:\Windows\system32>E:
+
+E:\>cd "E:\Development\L-Interpreter build 2019\SRC\Debug"
+
+E:\Development\L-Interpreter build 2019\SRC\Debug>li32.exe <имя_примера_без_расширения>

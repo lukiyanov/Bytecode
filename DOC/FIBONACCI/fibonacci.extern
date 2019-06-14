@@ -1,0 +1,6 @@
+0
+4
+kernel32 AllocConsole
+kernel32 ReadConsoleA
+kernel32 WriteConsoleA
+kernel32 GetStdHandle

@@ -1,0 +1,154 @@
+===============================================================================================================
+	Версия lock без обратного адреса - установка processor.lock в 0.
+	Если при ret processor.lock равен 0, то результат никуда не записывается.
+
+===============================================================================================================
+Список реализованных команд:
+	nop
+	halt
+//	brk	// TODO
+	mov: <src>, <dst> - 8/16/32, src:m, dst:m/v
+		mov8mm
+		mov8mv
+		mov16mm
+		mov16mv
+		mov32mm
+		mov32mv
+	jmp: <addr>, 32, addr:m/v
+		jmp32m
+		jmp32v
+	movsx: <src>, <dst> - 16x8/32x8/32x16, src:m, dst:m
+		movsx16x8mm
+		movsx32x8mm
+		movsx32x16mm
+		movzx16x8mm
+		movzx32x8mm
+		movzx32x16mm
+	push: <op> - 8/16/32, op:v/m
+		push8v
+		push16v
+		push32v
+		push8m
+		push16m
+		push32m
+	pop: <op> - 8/16/32, op:m
+		pop8m
+		pop16m
+		pop32m
+	spop: [<op>] - 16, op:v/m
+		spop
+		spop16v
+		spop16m
+	lock
+	lockm: <offset> - m
+	call: <addr> - 32, op:v/m
+		call32v
+		call32m
+	ret
+	ret: <val> - 8/16/32, m/v
+	cmpe: <val1>, <val2> - 8/16/32, val1:v/m, val2:v/m, но не val2:val1:v (оба v не могут)
+		cmpe8mm
+		cmpe8mv
+		cmpe8vm
+		cmpe16mm
+		cmpe16mv
+		cmpe16vm
+		cmpe32mm
+		cmpe32mv
+		cmpe32vm
+	cmpne: <val1>, <val2> - 8/16/32, val1:v/m, val2:v/m, но не val2:val1:v
+		cmpne8mm
+		cmpne8mv
+		cmpne8vm
+		cmpne16mm
+		cmpne16mv
+		cmpne16vm
+		cmpne32mm
+		cmpne32mv
+		cmpne32vm
+	cmpb: <val1>, <val2> - 8/16/32, val1:v/m, val2:v/m, но не val2:val1:v
+		cmpb8mm
+		cmpb8mv
+		cmpb8vm
+		cmpb16mm
+		cmpb16mv
+		cmpb16vm
+		cmpb32mm
+		cmpb32mv
+		cmpb32vm
+	cmpbe: <val1>, <val2> - 8/16/32, val1:v/m, val2:v/m, но не val2:val1:v
+		cmpbe8mm
+		cmpbe8mv
+		cmpbe8vm
+		cmpbe16mm
+		cmpbe16mv
+		cmpbe16vm
+		cmpbe32mm
+		cmpbe32mv
+		cmpbe32vm
+	cmpl: <val1>, <val2> - 8/16/32, val1:v/m, val2:v/m, но не val2:val1:v
+		cmpl8mm
+		cmpl8mv
+		cmpl8vm
+		cmpl16mm
+		cmpl16mv
+		cmpl16vm
+		cmpl32mm
+		cmpl32mv
+		cmpl32vm
+	cmple: <val1>, <val2> - 8/16/32, val1:v/m, val2:v/m, но не val2:val1:v
+		cmple8mm
+		cmple8mv
+		cmple8vm
+		cmple16mm
+		cmple16mv
+		cmple16vm
+		cmple32mm
+		cmple32mv
+		cmple32vm
+	jct: <addr> - 32, v/m
+		jct32v
+		jct32m
+	jcf: <addr> - 32, v/m
+		jcf32v
+		jcf32m
+	xlock
+	xlockm: <offset> - m
+	xcall: <ExternProcID> - 32, v/m
+	xret
+	xret: <val> - 8/16/32, m/v
+	lea: <dst>, <src> - 32, m
+		 <dst>, <CallbackProcID> - 32, m/v
+	mov: <dst>, <ptr>, <offset>, dst - 8/16/32, m, ptr - 32m, offset - 16v
+		mov8mpo
+		mov16mpo
+		mov32mpo
+	mov: <ptr>, <offset>, <src>, ptr - 32m, src - 8/16/32, m/v, offset - 16v
+		mov8pom
+		mov16pom
+		mov32pom
+		mov8pov
+		mov16pov
+		mov32pov
+	mov: <ptr1>, <offset1>, <ptr2>, <offset2>, ptr1/ptr2 - 32m, offset1/offset2 - 16v
+		mov8popo
+		mov16popo
+		mov32popo
+
+	add: ...
+	sub: ...
+	mul: ...
+	imul: ...
+	div: ...
+	idiv: ...
+	neg: ...
+	
+	and: ...
+	or: ...
+	xor: ...
+	not: ...
+	===============================================================================================================
+	
+	Команды для работы с вещественными числами не сделаны.
+	
+	===============================================================================================================
